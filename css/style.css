@@ -5,7 +5,8 @@
 }
 
 body{
-    background-color: rgb(2, 0, 106);
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
 }
 
 .nav-menu{
@@ -35,24 +36,19 @@ body{
     color: rgb(255, 255, 255);
 }
 
+.carousel-inner{
+    border-radius: 20px;
+}
+
 /* css do cartaz do filme*/
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
 
-body,
-html {
-	background: #000000;
-	padding: 0;
-	margin: 0;
-	padding-bottom: 6rem;
-	font-family: "Montserrat", sans-serif;
-	width: 100%;
-}
 .container {
 	padding-bottom: 3rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 img {
 	-webkit-box-reflect: below 5px
@@ -60,6 +56,7 @@ img {
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+    border-radius: 20px;
 }
 .container img:hover {
 	-webkit-transform: scale(1.1);
@@ -68,6 +65,9 @@ img {
 }
 .last {
 	margin-top: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .featured_wrapper {
 	position: relative;
@@ -80,6 +80,7 @@ img {
 	object-fit: cover;
 	-o-object-position: top;
 	object-position: top;
+
 }
 .title_wrapper {
 	position: absolute;
@@ -89,9 +90,11 @@ img {
 	padding: 20px 40px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
 }
 .title_wrapper h1 {
 	width: 70%;
+
 }
 button {
 	background: #f4061200 !important;
@@ -101,6 +104,9 @@ button {
 	outline: none;
 	border: 0 !important;
 }
+
+/*responsividade do site*/
+
 @media (max-width: 768px) {
 	.title_wrapper {
 		text-align: center;
