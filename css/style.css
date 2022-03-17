@@ -1,215 +1,212 @@
 *{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
-    background: linear-gradient(to right bottom, rgb(255, 255, 255rgb(44, 44, 44) 0));
-    overflow-x: hidden;
+	overflow-x: hidden;
+	background: linear-gradient(to right bottom, rgb(255, 153, 0), rgb(28, 10, 1));
 }
 
-.p1{
-	background: linear-gradient(to right bottom, rgb(226, 226, 226), rgb(111, 110, 110));
-}
-
-.sec-1{
+.nav-bar{
 	width: 100%;
-	background: linear-gradient(to right bottom, rgb(226, 226, 226), rgb(111, 110, 110));
-}
-
-
-.sec-2{
-	width: 100%;
-	background: linear-gradient(to right bottom, rgb(226, 226, 226), rgb(111, 110, 110));
-
-}
-
-
-.nav-menu{
-	width: 100%;
-	background: linear-gradient(to right bottom, rgb(226, 226, 226), rgb(111, 110, 110));
-	background: rgba(000, 000, 000, 0.900);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	position: fixed;
-	z-index: 1000;
+	height: 50px;
+	background-color: black;
 }
 
 .nav-list{
-    width: 70%;
-    height: 30px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    font-size: 30px;
-    color: rgb(255, 248, 248);
-
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 30px;
+	list-style: none;
+	margin-left: 380px;
 }
 
 .nav-list a{
-    text-decoration: none;
-    color: rgb(90, 90, 90);
-	transition: ease 0.3s;
+	text-decoration: none;
+	color: gray;
 }
 
 .nav-list a:hover{
-    color: rgb(255, 255, 255);
+	color: white;
+	transition: ease-in-out 0.5s;
 }
 
-.carousel-inner{
-	margin-bottom: 20px
+.b1{
+	margin-top: 20px;
 }
 
-
-/* css do cartaz do filme*/
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
-
-.container {
-	padding-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.container img {
-	-webkit-box-reflect: below 5px
-	 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-    border-radius: 10px;
-}
-.container img:hover {
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
-}
-.last {
-	margin-top: 6.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.wallpaper{
-    width: 100%;
-    display: flex;
-	flex-direction: column;
+.b2{
+	margin-top: 20px
 }
 
-.wallpaper img {
-	width: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	-o-object-position: top;
-	object-position: top;
-	margin-left: 0px;
-	border-radius: 20px;
+/* Cards dos livros */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container{
+  position: relative;
 }
 
-.title_wrapper {
-	position: absolute;
-	width: 100%;
-	left: 2rem;
-	bottom: 2rem;
-	padding: 20px 40px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-
-}
-.title_wrapper h1 {
-	width: 70%;
-
-}
-button {
-	background: #f4061200 !important;
-	color: #fff !important;
-	font-size: 18px;
-	padding: 0.5rem 3rem;
-	outline: none;
-	border: 0 !important;
+.container .card{
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-/*responsividade do site*/
-
-@media (max-width: 768px) {
-	.title_wrapper {
-		text-align: center;
-		left: 0;
-	}
-	.title_wrapper h1 {
-		font-size: 32px !important;
-		width: 100%;
-	}
-	.container {
-		padding: 20px;
-	}
-}
-@media (max-width: 480px) {
-	.column.is-one-quarter img {
-		width: 100%;
-		margin-bottom: 7rem;
-	}
+.container .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #792803;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
 }
 
-h2{
-	margin-left: 140px;
-	font-size: 61px;
-	font-weight: 500;
-	color: rgb(0, 0, 0);
+.container .card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after{
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255,255,25,0.05)
+}
+
+.container .card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container .card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
 
 }
 
-/* Borda Da Imagem Central */
+.container .card .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 230px;
+}
+
+.container .card .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container .card:hover .contentBx{
+  height: 210px;
+}
+
+.container .card .contentBx h2{
+  position: relative;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.container .card .contentBx .size, .container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container .card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.container .card .contentBx .size h3, .container .card .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container .card .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover{
+  background: #9bdc28;
+}
 
 
-  .wrapper {
-	padding-top: 100px;
-	width: 70%;
-	height: 600px;
-	margin: 0 auto;
-	position: relative;
-	overflow: hidden;
-	border-radius: 20px;
-  }
 
-  .main-element {
-	position: absolute;
-	top: 1%;
-	left: 1%;
-	display: block;
-	height: 98%;
-	width: 98%;
-	margin: auto;
-	align-self: center;
-	background: rgba(0, 0, 0, 0);
-	z-index: 1;
+.container .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to right bottom, rgba(255, 123, 0, 0), rgb(252, 122, 0));
+  border: solid;
+  border-radius: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(to right bottom, rgb(53, 28, 4), rgb(252, 122, 0));
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
 
-  }
-
-  .border {
-	position: absolute;
-	display: block;
-	top: -50%;
-	left: -50%;
-	z-index: -0.10;
-	display: block;
-	height: 200%;
-	width: 200%;
-	transform: rotate(-45deg);
-	overflow: hidden;
-	background: linear-gradient(to right, rgb(255, 0, 0) 20%, rgb(255, 89, 0) 40%, #ff0000 50%, #ff9900 55%, rgb(255, 0, 0) 70%, rgb(255, 145, 0) 100%);
-	background-size: 200% auto;
-
-	animation: shine 5s linear infinite;
-  }
-
-  /*Begin shimmer code*/
-
-  @keyframes shine {
-	  to {
-		background-position: 200% center;
-	  }
+.container .card:hover .contentBx a{
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  transform: translateY(0px);
+  transition: ease 1s;
 }

@@ -6,9 +6,10 @@ html {
     padding:0;
     font-family: sans-serif;
     background: linear-gradient(#141e30, #243b55);
-    background-image: url(../img/cinetax.jpg);
+    background-image: url(../img/layout4.jpg);
     background-size: cover;
     background-position: center;
+    overflow-y: hidden;
 
   }
 
