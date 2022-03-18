@@ -67,6 +67,7 @@ body{
   background: #232323;
   border-radius: 20px;
   overflow: hidden;
+  margin: auto;
 }
 
 .container .card:before{
