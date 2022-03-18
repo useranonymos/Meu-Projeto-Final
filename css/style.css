@@ -12,7 +12,9 @@ body{
 .nav-bar{
 	width: 100%;
 	height: 50px;
-	background-color: black;
+	background-color: rgba(17, 17, 17, 0.46);
+  position: fixed;
+  z-index: 1000;
 }
 
 .nav-list{
@@ -40,12 +42,19 @@ body{
 }
 
 .b2{
-	margin-top: 20px
+	margin-top: 20px;
+}
+
+.carousel-inner{
+  border-radius: 50px;
 }
 
 /* Cards dos livros */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 .container{
   position: relative;
@@ -67,7 +76,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: #792803;
+  background: #b16b03;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
@@ -91,7 +100,6 @@ body{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10000;
   width: 100%;
   height: 220px;
   transition: 0.5s;
@@ -108,7 +116,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-25deg);
-  width: 230px;
+  width: 270px;
 }
 
 .container .card .contentBx{
@@ -129,9 +137,9 @@ body{
   position: relative;
   font-weight: 900;
   letter-spacing: 1px;
-  color: #fff;
-  margin-top: 20px;
-  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  margin-top: 23px;
 }
 
 .container .card .contentBx .size, .container .card .contentBx .color {
@@ -182,31 +190,25 @@ body{
   cursor: pointer;
 }
 
-.container .card .contentBx .size span:hover{
-  background: #9bdc28;
-}
-
-
-
 .container .card .contentBx a{
+  width: 200px;
   display: inline-block;
   padding: 10px 20px;
-  background: linear-gradient(to right bottom, rgba(255, 123, 0, 0), rgb(252, 122, 0));
-  border: solid;
+  background: rgba(255, 255, 255, 0);
   border-radius: 20px;
+  border: solid;
   margin-top: 10px;
   text-decoration: none;
   font-weight: 600;
-  background: linear-gradient(to right bottom, rgb(53, 28, 4), rgb(252, 122, 0));
+  color: rgb(255, 255, 255);
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .container .card:hover .contentBx a{
-  color: rgb(0, 0, 0);
   opacity: 1;
   transform: translateY(0px);
-  transition: ease 1s;
+  transition-delay: 0.75s;
 }
